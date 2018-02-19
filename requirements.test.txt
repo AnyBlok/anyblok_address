@@ -1,0 +1,9 @@
+psycopg2
+sqlalchemy
+git+https://github.com/AnyBlok/anyblok-pyramid-rest-api.git#egg=anyblok-pyramid-rest-api
+-e .
+flake8
+coverage
+WebTest
+sphinx
+sphinxcontrib-httpdomain
