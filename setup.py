@@ -30,7 +30,6 @@ with open(os.path.join(here, 'VERSION'),
 
 requirements = [
     'anyblok',
-    'anyblok-pyramid-rest-api',
     'pycountry'
 ]
 
@@ -50,7 +49,6 @@ setup(
     entry_points={
         'bloks': [
             'address=anyblok_address.bloks.address:AddressBlok',
-            'address_rest_api=anyblok_address.bloks.rest_api:AddressRestApiBlok',
         ],
     },
     include_package_data=True,

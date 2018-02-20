@@ -28,7 +28,6 @@ install:
   - pip install flake8
   - pip install coverage
   - pip install nose
-  - pip install WebTest
   - pip install coveralls
   - python setup.py develop
 
