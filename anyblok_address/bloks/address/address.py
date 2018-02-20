@@ -9,7 +9,6 @@
 """Address model
 """
 from datetime import datetime
-import uuid
 from uuid import uuid1
 
 from pycountry import countries

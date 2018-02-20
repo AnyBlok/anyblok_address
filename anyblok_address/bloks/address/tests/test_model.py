@@ -53,14 +53,30 @@ class TestAddressModel(BlokTestCase):
         )
 
         from pycountry import countries
-        countries = dict((country.alpha_3, country.name) for country in countries)
+        countries = dict(
+            (country.alpha_3, country.name) for country in countries
+        )
 
         self.assertEqual(
-            len(list(set(self.registry.Address.query().all().country).intersection(set(countries.keys())))),
+            len(list(
+                    set(
+                        self.registry.Address.query().all().country
+                        ).intersection(
+                            set(countries.keys())
+                        )
+                    )
+                ),
             2
         )
         self.assertEqual(
-            len(list(set(self.registry.Address.query().all().country).difference(set(countries.keys())))),
+            len(list(
+                    set(
+                        self.registry.Address.query().all().country
+                        ).difference(
+                            set(countries.keys())
+                        )
+                    )
+                ),
             0
         )
 
