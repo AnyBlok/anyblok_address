@@ -1,15 +1,7 @@
-# This file is a part of the AnyBlok / Address project
-#
-#    Copyright (C) 2018 Franck Bret <f.bret@sensee.com>
-#    Copyright (C) 2018 Hugo Quezada <h.quezada@sensee.com>
-#
-# This Source Code Form is subject to the terms of the Mozilla Public License,
-# v. 2.0. If a copy of the MPL was not distributed with this file,You can
-# obtain one at http://mozilla.org/MPL/2.0/.
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# Anyblok Device documentation build configuration file, created by
+# Anyblok Address documentation build configuration file, created by
 # sphinx-quickstart on Fri Sep 22 12:52:36 2017.
 #
 # This file is execfile()d with the current directory set to its
@@ -55,7 +47,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'Anyblok Device'
+project = 'Anyblok Address'
 copyright = '2017, Franck Bret <f.bret@sensee.com>'
 author = 'Franck Bret'
 
@@ -122,7 +114,7 @@ html_sidebars = {
 # -- Options for HTMLHelp output ------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'Anyblok Devicedoc'
+htmlhelp_basename = 'Anyblok Addressdoc'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -148,8 +140,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'Anyblok Device.tex',
-     'Anyblok Device Documentation',
+    (master_doc, 'Anyblok Address.tex',
+     'Anyblok Address Documentation',
      'Franck Bret', 'manual'),
 ]
 
@@ -158,7 +150,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'Anyblok Device', 'Anyblok Device Documentation',
+    (master_doc, 'Anyblok Address', 'Anyblok Address Documentation',
      [author], 1)
 ]
 
@@ -168,7 +160,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'Anyblok Device', 'Anyblok Device Documentation',
-     author, 'Anyblok Device', 'One line description of project.',
+    (master_doc, 'Anyblok Address', 'Anyblok Address Documentation',
+     author, 'Anyblok Address', 'One line description of project.',
      'Miscellaneous'),
 ]
