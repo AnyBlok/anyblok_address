@@ -21,7 +21,7 @@
 .. image:: https://readthedocs.org/projects/anyblok-address/badge/?version=latest
     :alt: Documentation Status
     :scale: 100%
-    :target: https://doc.anyblok-address.org/en/latest/?badge=latest
+    :target: https://anyblok-address.readthedocs.io/en/latest/
 
 
 ==============
