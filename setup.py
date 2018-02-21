@@ -42,9 +42,9 @@ setup(
     version=version,
     description="Address management",
     long_description=readme + '\n\n' + changelog,
-    author="Franck Bret",
-    author_email='f.bret@sensee.com',
-    url='https://github.com/franckbret/anyblok_address',
+    author="Franck Bret, Hugo Quezada",
+    author_email='f.bret@sensee.com, h.quezada@sensee.com',
+    url='https://github.com/AnyBlok/anyblok_address',
     packages=find_packages(),
     entry_points={
         'bloks': [
