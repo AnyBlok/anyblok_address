@@ -18,7 +18,6 @@ from anyblok.column import String, DateTime, UUID, Selection
 
 from logging import getLogger
 
-
 logger = getLogger(__name__)
 Model = Declarations.Model
 Mixin = Declarations.Mixin
@@ -40,9 +39,9 @@ class TrackModel:
                          auto_update=True)
 
 
-@Declarations.register(Declarations.Model)
+@Declarations.register(Model)
 class Address(Mixin.UuidColumn, Mixin.TrackModel):
-    """ Postal address for delivery
+    """ Postal address
     """
     countries = dict((country.alpha_3, country.name) for country in countries)
 

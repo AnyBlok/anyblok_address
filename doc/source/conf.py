@@ -1,3 +1,11 @@
+# This file is a part of the AnyBlok / Address project
+#
+#    Copyright (C) 2018 Franck Bret <f.bret@sensee.com>
+#    Copyright (C) 2018 Hugo Quezada <h.quezada@sensee.com>
+#
+# This Source Code Form is subject to the terms of the Mozilla Public License,
+# v. 2.0. If a copy of the MPL was not distributed with this file,You can
+# obtain one at http://mozilla.org/MPL/2.0/.
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
@@ -32,7 +40,7 @@ sys.path.insert(0, os.path.abspath('../../'))
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = ['sphinx.ext.autodoc',
-              'sphinx.ext.viewcode']
+              'anyblok.sphinx.ext.load.blok']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
