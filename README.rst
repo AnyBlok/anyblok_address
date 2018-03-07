@@ -32,7 +32,7 @@ Address management
 
 AnyBlok is released under the terms of the `Mozilla Public License`.
 
-See the `latest documentation <http://doc.anyblok.org/>`_
+See the `latest documentation <http://doc.anyblok-address.anyblok.org>`_
 
 
 Features
