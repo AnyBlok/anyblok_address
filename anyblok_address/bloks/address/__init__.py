@@ -14,7 +14,7 @@ logger = getLogger(__name__)
 class AddressBlok(Blok):
     """Address blok
     """
-    version = "0.1.0"
+    version = "1.0.0"
     author = "Franck BRET"
 
     @classmethod
