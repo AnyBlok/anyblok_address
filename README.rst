@@ -51,6 +51,13 @@ Hugo Quezada
 h.quezada@sensee.com
 https://github.com/gohuhq
 
+Contributors
+------------
+
+Jean-Sebastien Suzanne
+jssuzanne@anybox.fr
+https://github.com/jssuzanne
+
 Credits
 -------
 
