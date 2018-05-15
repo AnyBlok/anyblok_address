@@ -14,7 +14,7 @@ from uuid import uuid1
 from pycountry import countries
 
 from anyblok import Declarations
-from anyblok.column import String, DateTime, UUID, Selection
+from anyblok.column import String, DateTime, UUID, Country, PhoneNumber, Email
 
 from logging import getLogger
 
@@ -54,10 +54,10 @@ class Address(Mixin.UuidColumn, Mixin.TrackModel):
     zip_code = String(label="Postal Code")
     state = String(label="State")
     city = String(label="City", nullable=False)
-    country = Selection(label="Country", selections=countries, nullable=False)
-    phone1 = String(label="Phone 1")
-    phone2 = String(label="Phone 2")
-    email = String(label="Email")
+    country = Country(label="Country", nullable=False)
+    phone1 = PhoneNumber(label="Phone 1")
+    phone2 = PhoneNumber(label="Phone 2")
+    email = Email(label="Email")
 
     def __str__(self):
         return ('{self.uuid}').format(self=self)

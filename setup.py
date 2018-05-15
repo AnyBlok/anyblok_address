@@ -29,7 +29,8 @@ with open(os.path.join(here, 'VERSION'),
 
 requirements = [
     'anyblok',
-    'pycountry'
+    'pycountry',
+    'phonenumbers',
 ]
 
 test_requirements = [
