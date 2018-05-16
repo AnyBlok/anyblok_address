@@ -47,37 +47,7 @@ class TestAddressModel(BlokTestCase):
             sender_address,
             recipient_address
         )
-        self.assertEqual(
-            self.registry.Address.query().count(),
-            2
-        )
-
-        from pycountry import countries
-        countries = dict(
-            (country.alpha_3, country.name) for country in countries
-        )
-
-        self.assertEqual(
-            len(list(
-                set([
-                    x.country.alpha_3
-                    for x in self.registry.Address.query().all()
-                ]).intersection(
-                    set(countries.keys())
-                ))
-                ),
-            2
-        )
-        self.assertEqual(
-            len(list(
-                set(
-                    self.registry.Address.query().all().country
-                ).difference(
-                    set(countries.keys())
-                ))
-                ),
-            0
-        )
+        self.assertEqual(self.registry.Address.query().count(), 2)
 
         self.assertEqual(
             self.registry.Address.query().filter_by(country="FRA").count(),
