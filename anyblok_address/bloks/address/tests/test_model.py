@@ -59,9 +59,10 @@ class TestAddressModel(BlokTestCase):
 
         self.assertEqual(
             len(list(
-                set(
-                    self.registry.Address.query().all().country.alpha_3
-                ).intersection(
+                set([
+                    x.country.alpha_3
+                    for x in self.registry.Address.query().all()
+                ]).intersection(
                     set(countries.keys())
                 ))
                 ),
