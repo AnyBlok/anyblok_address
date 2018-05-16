@@ -54,7 +54,7 @@ class Address(Mixin.UuidColumn, Mixin.TrackModel):
     zip_code = String(label="Postal Code")
     state = String(label="State")
     city = String(label="City", nullable=False)
-    country = Country(label="Country", nullable=False)
+    country = Country(label="Country", nullable=False, mode='alpha_3')
     phone1 = PhoneNumber(label="Phone 1")
     phone2 = PhoneNumber(label="Phone 2")
     email = Email(label="Email")
