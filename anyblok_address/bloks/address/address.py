@@ -11,8 +11,6 @@
 from datetime import datetime
 from uuid import uuid1
 
-from pycountry import countries
-
 from anyblok import Declarations
 from anyblok.column import String, DateTime, UUID, Country, PhoneNumber, Email
 
@@ -23,27 +21,15 @@ Model = Declarations.Model
 Mixin = Declarations.Mixin
 
 
-@Declarations.register(Mixin)
-class UuidColumn:
-    """ `UUID` id primary key mixin
+@Declarations.register(Model)
+class Address(Mixin.BooleanReadOnly):
+    """ Postal address
     """
+
     uuid = UUID(primary_key=True, default=uuid1, binary=False)
-
-
-@Declarations.register(Mixin)
-class TrackModel:
-    """ A mixin to store record creation and edition date
-    """
     create_date = DateTime(default=datetime.now, nullable=False)
     edit_date = DateTime(default=datetime.now, nullable=False,
                          auto_update=True)
-
-
-@Declarations.register(Model)
-class Address(Mixin.UuidColumn, Mixin.TrackModel):
-    """ Postal address
-    """
-    countries = dict((country.alpha_3, country.name) for country in countries)
 
     first_name = String(label="First name", nullable=False)
     last_name = String(label="Last name", nullable=False)
@@ -64,6 +50,7 @@ class Address(Mixin.UuidColumn, Mixin.TrackModel):
 
     def __repr__(self):
         msg = ('<Address: {self.uuid}, {self.first_name}, {self.last_name}, '
-               '{self.company_name}, {self.zip_code}, {self.country}>')
+               '{self.company_name}, {self.zip_code}, {self.country} '
+               '[RO={self.readonly}] >')
 
         return msg.format(self=self)
