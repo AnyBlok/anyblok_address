@@ -2,6 +2,7 @@
 #
 #    Copyright (C) 2018 Franck Bret <f.bret@sensee.com>
 #    Copyright (C) 2018 Hugo Quezada <h.quezada@sensee.com>
+#    Copyright (C) 2018 Jean-Sebastien Suzanne <jssuzanne@anybox.fr>
 #
 # This Source Code Form is subject to the terms of the Mozilla Public License,
 # v. 2.0. If a copy of the MPL was not distributed with this file,You can
