@@ -1,5 +1,6 @@
 psycopg2
 sqlalchemy
 git+https://github.com/AnyBlok/AnyBlok.git#egg=anyblok
+git+https://github.com/GohuHQ/anyblok_mixins.git#egg=anyblok_mixins
 flake8
 coverage

@@ -23,14 +23,9 @@ Mixin = Declarations.Mixin
 
 
 @Declarations.register(Model)
-class Address(Mixin.BooleanReadOnly):
+class Address(Mixin.UuidColumn, Mixin.TrackModel, Mixin.BooleanReadOnly):
     """ Postal address
     """
-
-    uuid = UUID(primary_key=True, default=uuid1, binary=False)
-    create_date = DateTime(default=datetime.now, nullable=False)
-    edit_date = DateTime(default=datetime.now, nullable=False,
-                         auto_update=True)
 
     first_name = String(label="First name", nullable=False)
     last_name = String(label="Last name", nullable=False)
