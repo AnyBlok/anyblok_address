@@ -29,6 +29,7 @@ with open(os.path.join(here, 'VERSION'),
 
 requirements = [
     'anyblok',
+    'anyblok_mixins',
     'pycountry',
     'phonenumbers',
 ]

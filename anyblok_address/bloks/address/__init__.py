@@ -16,6 +16,7 @@ class AddressBlok(Blok):
     """
     version = "1.0.0"
     author = "Franck BRET"
+    required = ['anyblok-mixins']
 
     @classmethod
     def import_declaration_module(cls):
