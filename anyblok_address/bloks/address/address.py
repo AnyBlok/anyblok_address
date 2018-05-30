@@ -9,11 +9,8 @@
 # obtain one at http://mozilla.org/MPL/2.0/.
 """Address model
 """
-from datetime import datetime
-from uuid import uuid1
-
 from anyblok import Declarations
-from anyblok.column import String, DateTime, UUID, Country, PhoneNumber, Email
+from anyblok.column import String, Country, PhoneNumber, Email
 
 from logging import getLogger
 
