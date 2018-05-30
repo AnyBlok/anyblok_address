@@ -23,12 +23,9 @@ services:
   - postgresql
 
 install:
-  - pip install psycopg2
-  - pip install flake8
-  - pip install coverage
+  - pip install -r requirements.test.txt
   - pip install nose
   - pip install coveralls
-  - pip install -r requirements.test.txt
   - python setup.py develop
 
 env:
