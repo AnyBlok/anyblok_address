@@ -39,6 +39,14 @@ class TestAddressModel(BlokTestCase):
         )
         return address
 
+    def test_str(self):
+        address = self.create_sender_address()
+        str(address)
+
+    def test_repr(self):
+        address = self.create_sender_address()
+        repr(address)
+
     def test_addresses(self):
         sender_address = self.create_sender_address()
         recipient_address = self.create_recipient_address()
