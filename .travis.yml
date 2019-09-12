@@ -1,18 +1,19 @@
 language: python
+dist: xenial
 sudo: false
 
 python:
-  - "3.4"
   - "3.5"
   - "3.6"
-  - "3.6-dev" # 3.6 development branch
+  - "3.7"
   - "3.7-dev" # 3.7 development branch
+  - "3.8-dev" # 3.8 development branch
   - "nightly"
 
 matrix:
   allow_failures:
-    - python: "3.6-dev"
     - python: "3.7-dev"
+    - python: "3.8-dev"
     - python: "nightly"
 
 virtualenv:
@@ -23,11 +24,6 @@ services:
 
 install:
   - pip install -U pip
-  # only eggs: do an erreur with wheel
-  - if [[ $TRAVIS_PYTHON_VERSION == '3.3' ]]; then pip install testfixtures; fi
-  - if [[ $TRAVIS_PYTHON_VERSION == '3.7-dev' ]]; then pip install python_editor texttable PyYAML; fi
-  - if [[ $TRAVIS_PYTHON_VERSION == 'nightly' ]]; then pip install python_editor texttable PyYAML; fi
-  # only wheel
   - pip install wheel
   - pip install -r requirements.test.txt
   - pip install nose
