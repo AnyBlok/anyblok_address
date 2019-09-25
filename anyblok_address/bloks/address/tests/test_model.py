@@ -2,15 +2,21 @@
 #
 #    Copyright (C) 2018 Franck Bret <f.bret@sensee.com>
 #    Copyright (C) 2018 Hugo Quezada <h.quezada@sensee.com>
+#    Copyright (C) 2019 Jean-Sébastien Suzanne <js.suzanne@gmail.com>
 #
 # This Source Code Form is subject to the terms of the Mozilla Public License,
 # v. 2.0. If a copy of the MPL was not distributed with this file,You can
 # obtain one at http://mozilla.org/MPL/2.0/.
-from anyblok.tests.testcase import BlokTestCase
+import pytest
 
 
-class TestAddressModel(BlokTestCase):
+@pytest.mark.usefixtures('rollback_registry')
+class TestAddressModel:
     """ Test address model"""
+
+    @pytest.fixture(autouse=True, scope='function')
+    def define_registry(self, rollback_registry):
+        self.registry = rollback_registry
 
     def create_sender_address(self):
         address = self.registry.Address.insert(
@@ -51,23 +57,17 @@ class TestAddressModel(BlokTestCase):
         sender_address = self.create_sender_address()
         recipient_address = self.create_recipient_address()
 
-        self.assertNotEqual(
-            sender_address,
-            recipient_address
-        )
-        self.assertEqual(self.registry.Address.query().count(), 2)
+        assert sender_address != recipient_address
+        assert self.registry.Address.query().count() == 2
 
-        self.assertEqual(
-            self.registry.Address.query().filter_by(country="FRA").count(),
-            1
+        assert (
+            self.registry.Address.query().filter_by(country="FRA").count() == 1
         )
 
-        self.assertEqual(
-            self.registry.Address.query().filter_by(country="ESP").count(),
-            1
+        assert (
+            self.registry.Address.query().filter_by(country="ESP").count() == 1
         )
 
-        self.assertEqual(
-            self.registry.Address.query().filter_by(country="USA").count(),
-            0
+        assert (
+            self.registry.Address.query().filter_by(country="USA").count() == 0
         )
