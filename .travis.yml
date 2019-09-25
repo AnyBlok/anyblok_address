@@ -26,7 +26,6 @@ install:
   - pip install -U pip
   - pip install wheel
   - pip install -r requirements.test.txt
-  - pip install nose
   - pip install coveralls
   - python setup.py develop
 
@@ -39,7 +38,7 @@ env:
 script:
   - flake8 anyblok_address --ignore F999
   - anyblok_createdb --install-all-bloks
-  - nosetests anyblok_address/bloks --with-anyblok-bloks -v -s --with-coverage --cover-package=anyblok_address
+  - pytest --cov-report= --cov=anyblok_address anyblok_address/bloks
 
 after_success:
-  coveralls
+  coveralls --data_file=.coverage --config_file=.coveragerc
